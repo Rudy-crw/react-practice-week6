@@ -40,7 +40,7 @@ const HookForm = () => {
         <hr />
         <input
           type="text"
-          style={{ border: errors.favoriteFoods && "1px solid red" }}
+          style={{ border: errors.favoriteFoods && "3px solid red" }}
           {...register("favoriteFoods", { required: "這個欄位是必填！" })}
         />
         {errors.favoriteFoods && errors.favoriteFoods.message}
@@ -81,6 +81,34 @@ const HookForm = () => {
         <hr />
         <input type="radio" {...register("gender")} value="男" />男
         <input type="radio" {...register("gender")} value="女" />女
+        <hr />
+        <input
+          type="password"
+          {...register("password", {
+            required: "密碼是必填項目",
+            minLength: {
+              value: 6,
+              message: "密碼長度至少需為 6 個字元",
+            },
+            maxLength: {
+              value: 12,
+              message: "密碼長度不得超過 12 個字元",
+            },
+          })}
+        />
+        <span>{errors.password ? errors.password.message : ""}</span>
+        <br />
+        <input
+          type="email"
+          {...register("email", {
+            required: "Email 是必填項目",
+            pattern: {
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+              message: "請輸入有效的 Email 格式",
+            },
+          })}
+        />
+        <span>{errors.email ? errors.email.message : ""}</span>
         <hr />
         <button type="submit">送出</button>
       </form>

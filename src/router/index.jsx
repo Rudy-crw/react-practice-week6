@@ -3,6 +3,7 @@ import App from "../App";
 import AboutHooks from "../pages/AboutHooks";
 import AboutForm from "../pages/AboutForm";
 import HookForm from "../pages/HookForm";
+import Loading from "../pages/Loading";
 const routes = [
   {
     path: "/",
@@ -12,6 +13,7 @@ const routes = [
       { path: "aboutHooks", element: <AboutHooks /> },
       { path: "aboutForm", element: <AboutForm /> },
       { path: "HookForm", element: <HookForm /> },
+      { path: "Loading", element: <Loading /> },
     ],
   },
 ];

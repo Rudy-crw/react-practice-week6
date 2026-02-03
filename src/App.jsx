@@ -6,7 +6,8 @@ function App() {
       <NavLink to="/about">關於我</NavLink>||
       <NavLink to="/aboutHooks">hook</NavLink>||
       <NavLink to="/aboutForm">Form</NavLink>||
-      <NavLink to="/HookForm">HookForm</NavLink>
+      <NavLink to="/HookForm">HookForm</NavLink>||
+      <NavLink to="/Loading">Loading</NavLink>
       <hr />
       <Outlet />
     </>
